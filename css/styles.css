@@ -1,23 +1,59 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 30px;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: inline;
-    margin-right: 15px;
+.espacio-fondo {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 14px;
+#lienzoEstrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contenido-frente {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-espacial {
+    background-color: rgba(9, 10, 15, 0.85) !important;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.texto-brillo {
+    text-shadow: 0 0 15px rgba(66, 153, 225, 0.6);
+}
+
+.card-espacio {
+    background-color: rgba(27, 39, 53, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-espacio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(66, 153, 225, 0.2);
+}
+
+.card-espacio .card-text.text-muted {
+    color: #a0aec0 !important;
+}
+
+.footer-espacial {
+    background-color: rgba(9, 10, 15, 0.9) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }

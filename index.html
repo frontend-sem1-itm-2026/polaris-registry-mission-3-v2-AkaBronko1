@@ -1,50 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLARIS Registry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="espacio-fondo text-white pt-5">
+    <canvas id="lienzoEstrellas"></canvas>
 
-<body>
+    <div class="contenido-frente">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-espacial fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold texto-brillo" href="index.html">POLARIS Registry</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.html">Registro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<header>
-    <h1>POLARIS</h1>
-    <p>Portal del Programa POLARIS</p>
-</header>
+        <header class="py-5 mt-4 text-center">
+            <div class="container py-5">
+                <h1 class="display-4 fw-bold mb-3 texto-brillo">POLARIS Registry</h1>
+                <p class="lead mb-4">Programa de Oportunidades para el Liderazgo y el Aprendizaje en la Revolucion de la Industria eSpacial.</p>
+                <p class="mb-4 text-light">Formando estudiantes en tecnologias espaciales en el Instituto Tecnologico de Matamoros.</p>
+                <a href="registro.html" class="btn btn-outline-light btn-lg px-5">Únete a POLARIS</a>
+            </div>
+        </header>
 
-<nav>
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Equipos</a></li>
-        <li><a href="#">Eventos</a></li>
-        <li><a href="registro.html">Únete a POLARIS</a></li>
-    </ul>
-</nav>
+        <section class="py-5" id="proyectos">
+            <div class="container">
+                <h2 class="text-center mb-5 texto-brillo">Seccion de Proyectos</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card card-espacio h-100">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-primary mb-3 align-self-start">Proyecto 1</span>
+                                <h5 class="card-title">PolariX</h5>
+                                <p class="card-text text-muted">Descripcion del proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card card-espacio h-100">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-success mb-3 align-self-start">Proyecto 2</span>
+                                <h5 class="card-title">Mentes en Órbita</h5>
+                                <p class="card-text text-muted">Descripcion del proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card card-espacio h-100">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-danger mb-3 align-self-start">Proyecto 3</span>
+                                <h5 class="card-title">Hydronautas</h5>
+                                <p class="card-text text-muted">Descripcion del proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<main>
+        <footer class="footer-espacial text-white text-center py-4 mt-auto">
+            <div class="container">
+                <p class="mb-0 text-light">2026 © Programa POLARIS – Instituto Tecnológico de Matamoros</p>
+            </div>
+        </footer>
+    </div>
 
-<section>
-    <h2>Bienvenido al Programa POLARIS</h2>
-    <p>
-        Plataforma del programa universitario de formación en tecnologías espaciales.
-    </p>
-</section>
-
-<section>
-    <h2>Proyectos</h2>
-    <p>
-        Aquí se mostrarán los equipos y proyectos del programa.
-    </p>
-</section>
-
-</main>
-
-<footer>
-    <p>Programa POLARIS – Instituto Tecnológico de Matamoros</p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>

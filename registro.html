@@ -33,31 +33,176 @@
         <section class="py-5 mt-4">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-6">
+                    <div class="col-12 col-lg-9">
                         <div class="card card-espacio p-4">
                             <h1 class="text-center mb-4 texto-brillo">Registro de Miembros POLARIS</h1>
 
-                            <form>
-                                <div class="mb-3">
-                                    <label class="form-label">Nombre completo</label>
-                                    <input type="text" class="form-control">
+                            <form class="row g-3">
+                                <h2 class="h5 mt-2">Datos personales</h2>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="nombreCompleto" class="form-label">Nombre completo</label>
+                                    <input id="nombreCompleto" name="nombreCompleto" type="text" class="form-control" required>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">Correo electronico</label>
-                                    <input type="email" class="form-control">
+                                <div class="col-12 col-md-6">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input id="correo" name="correo" type="email" class="form-control" placeholder="nombre@correo.com" required>
                                 </div>
 
-                                <div class="mb-4">
-                                    <label class="form-label">Proyecto de interes</label>
-                                    <select class="form-select">
-                                        <option>PolariX</option>
-                                        <option>Mentes en Orbita</option>
-                                        <option>Hydronautas</option>
+                                <div class="col-12 col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="8681234567" required>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                                    <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-control" required>
+                                </div>
+
+                                <hr class="my-3">
+                                <h2 class="h5">Datos academicos</h2>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="institucion" class="form-label">Institución</label>
+                                    <input id="institucion" name="institucion" type="text" class="form-control" required>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="carrera" class="form-label">Carrera</label>
+                                    <input id="carrera" name="carrera" type="text" class="form-control" required>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <label for="semestre" class="form-label">Semestre</label>
+                                    <input id="semestre" name="semestre" type="number" min="1" max="12" class="form-control" required>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <label for="generacion" class="form-label">Generación POLARIS</label>
+                                    <input id="generacion" name="generacion" type="text" class="form-control" placeholder="Ej. Generación 2026" required>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <label for="anioIngreso" class="form-label">Año de ingreso</label>
+                                    <input id="anioIngreso" name="anioIngreso" type="number" min="2018" max="2035" class="form-control" required>
+                                </div>
+
+                                <hr class="my-3">
+                                <h2 class="h5">Perfil POLARIS</h2>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="proyectoInteres" class="form-label">Proyecto o equipo de interes</label>
+                                    <select id="proyectoInteres" name="proyectoInteres" class="form-select" required>
+                                        <option value="" selected disabled>Selecciona una opcion</option>
+                                        <option value="mentes-en-orbita">Mentes en Orbita</option>
+                                        <option value="polarix">PolariX</option>
+                                        <option value="hydronautas">Hydronautas</option>
+                                        <option value="otro">Otro</option>
                                     </select>
                                 </div>
 
-                                <button type="submit" class="btn btn-outline-light w-100 btn-lg">Enviar</button>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label d-block">Tipo de participacion</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEstudiante" value="estudiante" checked>
+                                        <label class="form-check-label" for="participacionEstudiante">Estudiante</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEgresado" value="egresado">
+                                        <label class="form-check-label" for="participacionEgresado">Egresado</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionDocente" value="docente">
+                                        <label class="form-check-label" for="participacionDocente">Docente</label>
+                                    </div>
+                                </div>
+
+                                <hr class="my-3">
+                                <h2 class="h5">Habilidades y areas de interes</h2>
+
+                                <div class="col-12">
+                                    <div class="row g-2">
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="habProgramacion" name="habilidades" value="programacion">
+                                                <label class="form-check-label" for="habProgramacion">Programación</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="habElectronica" name="habilidades" value="electronica">
+                                                <label class="form-check-label" for="habElectronica">Electrónica</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="habCad" name="habilidades" value="diseno-cad">
+                                                <label class="form-check-label" for="habCad">Diseño CAD</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="habInvestigacion" name="habilidades" value="investigacion">
+                                                <label class="form-check-label" for="habInvestigacion">Investigación</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="habDivulgacion" name="habilidades" value="divulgacion">
+                                                <label class="form-check-label" for="habDivulgacion">Divulgación</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-3">
+                                <h2 class="h5">Seguimiento</h2>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="lugarActual" class="form-label">Lugar de trabajo o institucion actual</label>
+                                    <input id="lugarActual" name="lugarActual" type="text" class="form-control">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label d-block">Rol actual</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolLider" value="lider-equipo" required>
+                                        <label class="form-check-label" for="rolLider">Lider de equipo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolParticipante" value="participante">
+                                        <label class="form-check-label" for="rolParticipante">Participante</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolMentor" value="mentor">
+                                        <label class="form-check-label" for="rolMentor">Mentor</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolCoordinador" value="coordinador">
+                                        <label class="form-check-label" for="rolCoordinador">Coordinador</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolColaborador" value="colaborador">
+                                        <label class="form-check-label" for="rolColaborador">Colaborador</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label d-block">Interés en seguir colaborando con POLARIS</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirSi" value="si" required>
+                                        <label class="form-check-label" for="seguirSi">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirNo" value="no">
+                                        <label class="form-check-label" for="seguirNo">No</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-outline-light w-100 btn-lg mt-2">Enviar registro</button>
+                                </div>
                             </form>
                         </div>
                     </div>

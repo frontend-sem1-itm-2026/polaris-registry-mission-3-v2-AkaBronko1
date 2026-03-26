@@ -42,17 +42,17 @@
 
                                 <div class="col-12 col-md-6">
                                     <label for="nombreCompleto" class="form-label">Nombre completo</label>
-                                    <input id="nombreCompleto" name="nombreCompleto" type="text" class="form-control" required>
+                                    <input id="nombreCompleto" name="nombreCompleto" type="text" class="form-control" placeholder="Nombre completo" maxlength="100" required>
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <label for="correo" class="form-label">Correo electronico</label>
                                     <input id="correo" name="correo" type="email" class="form-control" placeholder="nombre@correo.com" required>
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                    <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="8681234567" required>
+                                    <label for="telefono" class="form-label">Telefono</label>
+                                    <input id="telefono" name="telefono" type="tel" class="form-control" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" placeholder="10 digitos" required>
                                 </div>
 
                                 <div class="col-12 col-md-6">
@@ -64,23 +64,23 @@
                                 <h2 class="h5">Datos academicos</h2>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="institucion" class="form-label">Institución</label>
-                                    <input id="institucion" name="institucion" type="text" class="form-control" required>
+                                    <label for="institucion" class="form-label">Institucion</label>
+                                    <input id="institucion" name="institucion" type="text" class="form-control" placeholder="Institucion educativa" maxlength="120" required>
                                 </div>
 
                                 <div class="col-12 col-md-6">
                                     <label for="carrera" class="form-label">Carrera</label>
-                                    <input id="carrera" name="carrera" type="text" class="form-control" required>
+                                    <input id="carrera" name="carrera" type="text" class="form-control" placeholder="Nombre de la carrera" maxlength="100" required>
                                 </div>
 
                                 <div class="col-12 col-md-4">
                                     <label for="semestre" class="form-label">Semestre</label>
-                                    <input id="semestre" name="semestre" type="number" min="1" max="12" class="form-control" required>
+                                    <input id="semestre" name="semestre" type="number" min="1" max="12" placeholder="1 a 12" class="form-control" required>
                                 </div>
 
                                 <div class="col-12 col-md-4">
-                                    <label for="generacion" class="form-label">Generación POLARIS</label>
-                                    <input id="generacion" name="generacion" type="text" class="form-control" placeholder="Ej. Generación 2026" required>
+                                    <label for="generacion" class="form-label">Generacion POLARIS</label>
+                                    <input id="generacion" name="generacion" type="text" class="form-control" placeholder="Ej. Generacion 2026" maxlength="40" required>
                                 </div>
 
                                 <div class="col-12 col-md-4">
@@ -103,9 +103,9 @@
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label class="form-label d-block">Tipo de participacion</label>
+                                    <label class="form-label d-block">Rol dentro de POLARIS</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEstudiante" value="estudiante" checked>
+                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEstudiante" value="estudiante" required>
                                         <label class="form-check-label" for="participacionEstudiante">Estudiante</label>
                                     </div>
                                     <div class="form-check">
@@ -126,31 +126,31 @@
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="habProgramacion" name="habilidades" value="programacion">
-                                                <label class="form-check-label" for="habProgramacion">Programación</label>
+                                                <label class="form-check-label" for="habProgramacion">Programacion</label>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="habElectronica" name="habilidades" value="electronica">
-                                                <label class="form-check-label" for="habElectronica">Electrónica</label>
+                                                <label class="form-check-label" for="habElectronica">Electronica</label>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="habCad" name="habilidades" value="diseno-cad">
-                                                <label class="form-check-label" for="habCad">Diseño CAD</label>
+                                                <label class="form-check-label" for="habCad">Disenio CAD</label>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="habInvestigacion" name="habilidades" value="investigacion">
-                                                <label class="form-check-label" for="habInvestigacion">Investigación</label>
+                                                <label class="form-check-label" for="habInvestigacion">Investigacion</label>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="habDivulgacion" name="habilidades" value="divulgacion">
-                                                <label class="form-check-label" for="habDivulgacion">Divulgación</label>
+                                                <label class="form-check-label" for="habDivulgacion">Divulgacion</label>
                                             </div>
                                         </div>
                                     </div>
@@ -161,13 +161,13 @@
 
                                 <div class="col-12 col-md-6">
                                     <label for="lugarActual" class="form-label">Lugar de trabajo o institucion actual</label>
-                                    <input id="lugarActual" name="lugarActual" type="text" class="form-control">
+                                    <input id="lugarActual" name="lugarActual" type="text" class="form-control" maxlength="120" placeholder="Empresa o institucion (opcional)">
                                 </div>
 
                                 <div class="col-12 col-md-6">
                                     <label class="form-label d-block">Rol actual</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolLider" value="lider-equipo" required>
+                                        <input class="form-check-input" type="radio" name="rolActual" id="rolLider" value="lider-equipo">
                                         <label class="form-check-label" for="rolLider">Lider de equipo</label>
                                     </div>
                                     <div class="form-check">
@@ -189,7 +189,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label class="form-label d-block">Interés en seguir colaborando con POLARIS</label>
+                                    <label class="form-label d-block">Interes en seguir colaborando con POLARIS</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirSi" value="si" required>
                                         <label class="form-check-label" for="seguirSi">Si</label>

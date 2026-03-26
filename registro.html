@@ -38,90 +38,121 @@
                             <h1 class="text-center mb-4 texto-brillo">Registro de Miembros POLARIS</h1>
 
                             <form id="formularioRegistro" class="row g-3" novalidate>
-                                <h2 class="h5 mt-2">Datos personales</h2>
+                                <fieldset class="col-12 seccion-formulario">
+                                    <legend class="h5 mt-2">Datos personales</legend>
+                                    <p class="texto-ayuda-seccion mb-3">Completa tu informacion basica para identificar tu registro.</p>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="nombreCompleto" class="form-label">Nombre completo <span class="campo-obligatorio">*</span></label>
+                                            <input id="nombreCompleto" name="nombreCompleto" type="text" class="form-control" placeholder="Ej. Juan Perez Martinez" maxlength="100" aria-describedby="ayudaNombre errorNombreCompleto" required>
+                                            <small id="ayudaNombre" class="texto-ayuda">Escribe nombre y apellidos. Minimo 10 caracteres.</small>
+                                            <div id="errorNombreCompleto" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label for="nombreCompleto" class="form-label">Nombre completo</label>
-                                    <input id="nombreCompleto" name="nombreCompleto" type="text" class="form-control" placeholder="Nombre completo" maxlength="100" required>
-                                </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="correo" class="form-label">Correo electronico <span class="campo-obligatorio">*</span></label>
+                                            <input id="correo" name="correo" type="email" class="form-control" placeholder="Ej. usuario@correo.com" aria-describedby="ayudaCorreo errorCorreo" required>
+                                            <small id="ayudaCorreo" class="texto-ayuda">Usa un correo valido para contacto oficial.</small>
+                                            <div id="errorCorreo" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label for="correo" class="form-label">Correo electronico</label>
-                                    <input id="correo" name="correo" type="email" class="form-control" placeholder="nombre@correo.com" required>
-                                </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="telefono" class="form-label">Telefono <span class="campo-obligatorio">*</span></label>
+                                            <input id="telefono" name="telefono" type="tel" class="form-control" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" placeholder="Ej. 8681234567" aria-describedby="ayudaTelefono errorTelefono" required>
+                                            <small id="ayudaTelefono" class="texto-ayuda">El telefono debe tener exactamente 10 digitos.</small>
+                                            <div id="errorTelefono" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label for="telefono" class="form-label">Telefono</label>
-                                    <input id="telefono" name="telefono" type="tel" class="form-control" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" placeholder="10 digitos" required>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
-                                    <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-control" required>
-                                </div>
-
-                                <hr class="my-3">
-                                <h2 class="h5">Datos academicos</h2>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="institucion" class="form-label">Institucion</label>
-                                    <input id="institucion" name="institucion" type="text" class="form-control" placeholder="Institucion educativa" maxlength="120" required>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="carrera" class="form-label">Carrera</label>
-                                    <input id="carrera" name="carrera" type="text" class="form-control" placeholder="Nombre de la carrera" maxlength="100" required>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <label for="semestre" class="form-label">Semestre</label>
-                                    <input id="semestre" name="semestre" type="number" min="1" max="12" placeholder="1 a 12" class="form-control" required>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <label for="generacion" class="form-label">Generacion POLARIS</label>
-                                    <input id="generacion" name="generacion" type="text" class="form-control" placeholder="Ej. Generacion 2026" maxlength="40" required>
-                                </div>
-
-                                <div class="col-12 col-md-4">
-                                    <label for="anioIngreso" class="form-label">Año de ingreso</label>
-                                    <input id="anioIngreso" name="anioIngreso" type="number" min="2018" max="2035" class="form-control" required>
-                                </div>
-
-                                <hr class="my-3">
-                                <h2 class="h5">Perfil POLARIS</h2>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="proyectoInteres" class="form-label">Proyecto o equipo de interes</label>
-                                    <select id="proyectoInteres" name="proyectoInteres" class="form-select" required>
-                                        <option value="" selected disabled>Selecciona una opcion</option>
-                                        <option value="mentes-en-orbita">Mentes en Orbita</option>
-                                        <option value="polarix">PolariX</option>
-                                        <option value="hydronautas">Hydronautas</option>
-                                        <option value="otro">Otro</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <label class="form-label d-block">Rol dentro de POLARIS</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEstudiante" value="estudiante" required>
-                                        <label class="form-check-label" for="participacionEstudiante">Estudiante</label>
+                                        <div class="col-12 col-md-6">
+                                            <label for="fechaNacimiento" class="form-label">Fecha de nacimiento <span class="campo-obligatorio">*</span></label>
+                                            <input id="fechaNacimiento" name="fechaNacimiento" type="date" class="form-control" aria-describedby="errorFechaNacimiento" required>
+                                            <div id="errorFechaNacimiento" class="mensaje-error"></div>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEgresado" value="egresado">
-                                        <label class="form-check-label" for="participacionEgresado">Egresado</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionDocente" value="docente">
-                                        <label class="form-check-label" for="participacionDocente">Docente</label>
-                                    </div>
-                                </div>
+                                </fieldset>
 
-                                <hr class="my-3">
-                                <h2 class="h5">Habilidades y areas de interes</h2>
+                                <fieldset class="col-12 seccion-formulario">
+                                    <legend class="h5">Datos academicos</legend>
+                                    <p class="texto-ayuda-seccion mb-3">Indica tu situacion academica actual dentro de la institucion.</p>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="institucion" class="form-label">Institucion <span class="campo-obligatorio">*</span></label>
+                                            <input id="institucion" name="institucion" type="text" class="form-control" placeholder="Ej. Instituto Tecnologico de Matamoros" maxlength="120" aria-describedby="errorInstitucion" required>
+                                            <div id="errorInstitucion" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12">
+                                        <div class="col-12 col-md-6">
+                                            <label for="carrera" class="form-label">Carrera <span class="campo-obligatorio">*</span></label>
+                                            <select id="carrera" name="carrera" class="form-select" aria-describedby="ayudaCarrera errorCarrera" required>
+                                                <option value="" selected disabled>Selecciona tu carrera</option>
+                                                <option value="mecatronica">Ingenieria Mecatronica</option>
+                                                <option value="sistemas">Ingenieria en Sistemas Computacionales</option>
+                                                <option value="electrica">Ingenieria Electrica</option>
+                                                <option value="industrial">Ingenieria Industrial</option>
+                                                <option value="otra">Otra</option>
+                                            </select>
+                                            <small id="ayudaCarrera" class="texto-ayuda">Selecciona una opcion de carrera.</small>
+                                            <div id="errorCarrera" class="mensaje-error"></div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <label for="semestre" class="form-label">Semestre <span class="campo-obligatorio">*</span></label>
+                                            <input id="semestre" name="semestre" type="number" min="1" max="12" placeholder="Ej. 6" class="form-control" aria-describedby="errorSemestre" required>
+                                            <div id="errorSemestre" class="mensaje-error"></div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <label for="generacion" class="form-label">Generacion POLARIS <span class="campo-obligatorio">*</span></label>
+                                            <input id="generacion" name="generacion" type="text" class="form-control" placeholder="Ej. Generacion 2026" maxlength="40" aria-describedby="errorGeneracion" required>
+                                            <div id="errorGeneracion" class="mensaje-error"></div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <label for="anioIngreso" class="form-label">Año de ingreso <span class="campo-obligatorio">*</span></label>
+                                            <input id="anioIngreso" name="anioIngreso" type="number" min="2018" max="2035" class="form-control" placeholder="Ej. 2024" aria-describedby="errorAnioIngreso" required>
+                                            <div id="errorAnioIngreso" class="mensaje-error"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="col-12 seccion-formulario">
+                                    <legend class="h5">Perfil POLARIS</legend>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="proyectoInteres" class="form-label">Proyecto o equipo de interes <span class="campo-obligatorio">*</span></label>
+                                            <select id="proyectoInteres" name="proyectoInteres" class="form-select" aria-describedby="errorProyectoInteres" required>
+                                                <option value="" selected disabled>Selecciona una opcion</option>
+                                                <option value="mentes-en-orbita">Mentes en Orbita</option>
+                                                <option value="polarix">PolariX</option>
+                                                <option value="hydronautas">Hydronautas</option>
+                                                <option value="otro">Otro</option>
+                                            </select>
+                                            <div id="errorProyectoInteres" class="mensaje-error"></div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <label class="form-label d-block">Rol dentro de POLARIS <span class="campo-obligatorio">*</span></label>
+                                            <small class="texto-ayuda d-block mb-2">Selecciona el rol con el que participaras.</small>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEstudiante" value="estudiante" required>
+                                                <label class="form-check-label" for="participacionEstudiante">Estudiante</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionEgresado" value="egresado">
+                                                <label class="form-check-label" for="participacionEgresado">Egresado</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tipoParticipacion" id="participacionDocente" value="docente">
+                                                <label class="form-check-label" for="participacionDocente">Docente</label>
+                                            </div>
+                                            <div id="errorTipoParticipacion" class="mensaje-error"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="col-12 seccion-formulario">
+                                    <legend class="h5">Habilidades</legend>
+                                    <small class="texto-ayuda d-block mb-2">Selecciona al menos una habilidad para continuar.</small>
                                     <div class="row g-2">
                                         <div class="col-6 col-md-4">
                                             <div class="form-check">
@@ -154,63 +185,72 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div id="errorHabilidades" class="mensaje-error mt-2"></div>
+                                </fieldset>
 
-                                <hr class="my-3">
-                                <h2 class="h5">Seguimiento</h2>
+                                <fieldset class="col-12 seccion-formulario">
+                                    <legend class="h5">Seguimiento</legend>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="lugarActual" class="form-label">Lugar de trabajo o institucion actual</label>
+                                            <input id="lugarActual" name="lugarActual" type="text" class="form-control" maxlength="120" placeholder="Ej. Centro de Innovacion Espacial" aria-describedby="ayudaLugarActual errorLugarActual">
+                                            <small id="ayudaLugarActual" class="texto-ayuda">Si lo capturas, escribe al menos 5 caracteres.</small>
+                                            <div id="errorLugarActual" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label for="lugarActual" class="form-label">Lugar de trabajo o institucion actual</label>
-                                    <input id="lugarActual" name="lugarActual" type="text" class="form-control" maxlength="120" placeholder="Empresa o institucion (opcional)">
-                                </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="motivacion" class="form-label">Motivacion para integrarte a POLARIS <span class="campo-obligatorio">*</span></label>
+                                            <textarea id="motivacion" name="motivacion" class="form-control" rows="3" minlength="20" maxlength="400" placeholder="Ej. Quiero aportar en proyectos de tecnologia espacial" aria-describedby="ayudaMotivacion errorMotivacion" required></textarea>
+                                            <small id="ayudaMotivacion" class="texto-ayuda">Escribe una motivacion clara de minimo 20 caracteres.</small>
+                                            <div id="errorMotivacion" class="mensaje-error"></div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label for="motivacion" class="form-label">Motivacion para integrarte a POLARIS</label>
-                                    <textarea id="motivacion" name="motivacion" class="form-control" rows="3" minlength="20" maxlength="400" placeholder="Comparte por que quieres participar" required></textarea>
-                                </div>
+                                        <div class="col-12 col-md-6">
+                                            <label class="form-label d-block">Rol actual</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="rolActual" id="rolLider" value="lider-equipo">
+                                                <label class="form-check-label" for="rolLider">Lider de equipo</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="rolActual" id="rolParticipante" value="participante">
+                                                <label class="form-check-label" for="rolParticipante">Participante</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="rolActual" id="rolMentor" value="mentor">
+                                                <label class="form-check-label" for="rolMentor">Mentor</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="rolActual" id="rolCoordinador" value="coordinador">
+                                                <label class="form-check-label" for="rolCoordinador">Coordinador</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="rolActual" id="rolColaborador" value="colaborador">
+                                                <label class="form-check-label" for="rolColaborador">Colaborador</label>
+                                            </div>
+                                        </div>
 
-                                <div class="col-12 col-md-6">
-                                    <label class="form-label d-block">Rol actual</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolLider" value="lider-equipo">
-                                        <label class="form-check-label" for="rolLider">Lider de equipo</label>
+                                        <div class="col-12">
+                                            <label class="form-label d-block">Interes en seguir colaborando con POLARIS <span class="campo-obligatorio">*</span></label>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirSi" value="si" required>
+                                                <label class="form-check-label" for="seguirSi">Si</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirNo" value="no">
+                                                <label class="form-check-label" for="seguirNo">No</label>
+                                            </div>
+                                            <div id="errorSeguirColaborando" class="mensaje-error"></div>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolParticipante" value="participante">
-                                        <label class="form-check-label" for="rolParticipante">Participante</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolMentor" value="mentor">
-                                        <label class="form-check-label" for="rolMentor">Mentor</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolCoordinador" value="coordinador">
-                                        <label class="form-check-label" for="rolCoordinador">Coordinador</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="rolActual" id="rolColaborador" value="colaborador">
-                                        <label class="form-check-label" for="rolColaborador">Colaborador</label>
-                                    </div>
-                                </div>
+                                </fieldset>
 
                                 <div class="col-12">
-                                    <label class="form-label d-block">Interes en seguir colaborando con POLARIS</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirSi" value="si" required>
-                                        <label class="form-check-label" for="seguirSi">Si</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="seguirColaborando" id="seguirNo" value="no">
-                                        <label class="form-check-label" for="seguirNo">No</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
+                                    <p class="texto-ayuda-seccion mb-2"><span class="campo-obligatorio">*</span> Campo obligatorio.</p>
                                     <div id="mensajesFormulario" class="alert d-none mb-0" role="alert"></div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-outline-light w-100 btn-lg mt-2">Enviar registro</button>
+                                    <button type="submit" class="btn btn-outline-light w-100 btn-lg mt-2">Registrarme en POLARIS</button>
                                 </div>
                             </form>
                         </div>
